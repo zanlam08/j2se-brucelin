@@ -1,0 +1,55 @@
+Sample running result as below.
+
+E:\mvnTest\j2se>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -------------------------< com.how2java:j2se >--------------------------
+[INFO] Building j2se 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ j2se ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\mvnTest\j2se\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ j2se ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding GBK, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to E:\mvnTest\j2se\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ j2se ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\mvnTest\j2se\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ j2se ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ j2se ---
+[INFO] Surefire report directory: E:\mvnTest\j2se\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.how2java.AppTest
+illegal Digital Input
+Output=£º[null]
+0-1=£º[null]
+Output=£º[D, E, F]
+Output=£º[A, B, C]
+Output=£º[AD, AE, AF, BD, BE, BF, CD, CE, CF]
+Output=£º[D, E, F]
+Output=£º[A, B, C]
+Output=£º[AD, AE, AF, BD, BE, BF, CD, CE, CF]
+Output=£º[W, X, Y, Z]
+Output=£º[WAD, WAE, WAF, WBD, WBE, WBF, WCD, WCE, WCF, XAD, XAE, XAF, XBD, XBE, XBF, XCD, XCE, XCF, YAD, YAE, YAF, YBD, YBE, YBF, YCD, YCE, YCF, ZAD, ZAE, ZAF, ZBD, ZBE, ZBF, ZCD, ZCE, ZCF]
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.977 s
+[INFO] Finished at: 2019-08-03T15:46:27+08:00
+[INFO] ------------------------------------------------------------------------

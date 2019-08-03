@@ -1,0 +1,92 @@
+package com.how2java;
+import java.util.Arrays;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public void Test_Suite_Main23()  // test for normal input case in 2 level
+    {
+        //return new TestSuite( AppTest.class );
+        int[] result_input={2,3};
+        String[] result_2_3={"AD", "AE", "AF", "BD", "BE", "BF", "CD", "CE", "CF"};
+        String[] result_str=App.numlist2strlist(result_input);
+        assertEquals(result_2_3[0],result_str[0]); //test first element
+        assertEquals(result_2_3[8],result_str[8]); //test last element
+    }
+    public void Test_Suite_Main923()  // test for normal input case in 3 level
+    {
+        //return new TestSuite( AppTest.class );
+        int[] result_input={9,2,3};
+        String[] result_9_2_3= new String[36];
+        result_9_2_3[5]="WBF";
+        result_9_2_3[35]="ZCF";
+        String[] result_str=App.numlist2strlist(result_input);
+        assertEquals(result_9_2_3[5],result_str[5]); //test first element
+        assertEquals(result_9_2_3[35],result_str[35]); //test last element
+        
+    }
+    public void Test_Suite_Main0_1()  //test for unmapped digital
+    {
+        //return new TestSuite( AppTest.class );
+        int[] result_input={0};
+        String[] result_0_1={"null"};
+        String[] result_str=App.numlist2strlist(result_input);
+        System.out.println("0-1=£º"+Arrays.toString(result_str));
+        assertEquals(result_0_1[0],result_str[0]);
+       /* result_input[0]=1;
+        assertEquals(result_0_1,App.numlist2strlist(result_input));
+        result_input[0]=10;
+        assertEquals(result_0_1,App.numlist2strlist(result_input));
+        */
+        
+    }
+    public void Test_Suite_Main7_8_9()  //test for special mapping digital
+    {
+        //return new TestSuite( AppTest.class );
+        int[] result_input={9};
+        String[] result_9={"W","X","Y","Z"};
+        assertEquals(result_9,App.numlist2strlist(result_input));
+ 
+         
+        result_input[0]=7;	  
+	   	  String[] result_7={"P","Q","R","S"};
+	   	  assertEquals(result_7,App.numlist2strlist(result_input));
+
+	   	  result_input[0]=8;	  
+	   	  String[] result_8={"T","U","V"};
+        assertEquals(result_8,App.numlist2strlist(result_input));
+        
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+    	 
+    	  Test_Suite_Main0_1();
+    	  Test_Suite_Main23();
+    	  Test_Suite_Main923();
+    	
+        //assertTrue( true );
+    }
+}
